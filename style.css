@@ -1,0 +1,465 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Sofia", sans-serif;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+/* nav-ver start */
+.nav-ver{
+    background-color: #3ac145;
+    padding: 10px;
+}
+
+.nav-logo{
+    text-align: center;
+}
+.nav-header{
+    text-align: center;
+    margin-top: 8px;
+}
+.nav-header h1{
+    text-transform: uppercase;
+}
+.nav-menu{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.nav-menu a{
+    background-color: darkslategray;
+    text-decoration: none;
+    color:white;
+    margin: 10px 0px;
+    padding: 20px;
+    border-radius: 10px;
+    text-transform: uppercase;
+
+}
+.nav-menu a:hover{
+    background-color:#40868b;
+}
+/* for desktop */
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+}
+/* for mobile */
+
+[class*="col-"]{
+    width: 100%;
+}
+
+ .nav-ver::after{
+    content: '';
+    clear: both;
+    display: table;
+ }
+/* nav-ver end */
+
+/* propile start  */
+.propile{
+    position: relative;
+    padding: 140px 10px;
+    text-align: center;
+}
+
+.propile-des{
+    padding: 20px;
+}
+
+.propile-des h1{
+    text-transform: uppercase;
+    padding: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.propile-des p{
+    color: gray;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    width: 90%;
+}
+
+.top-icon{
+    position: absolute;
+    right: 60px;
+    top: 20px;
+    transition: transform, 2s;
+}
+.top-icon:hover{
+    transform: rotate(360deg);
+}
+
+.bottom-icon{
+    position: absolute;
+    left: 60px;
+    bottom: 20px;
+    transition: transform, 2s;
+}
+.bottom-icon:hover{
+    transform: rotate(360deg);
+}
+
+.propile::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+/* propile start  */
+
+/* aboutme start */
+
+.aboutme{
+    text-align: center;
+    background-color: #40868b;
+    padding: 10px;
+    color: white;
+}
+
+.dotted-hr{
+    border: dotted 6px white;
+    border-bottom: none;
+    width: 150px;
+    margin-bottom: 40px;
+}
+
+.aboutme-image img{
+    border-radius: 50%;
+    border: 5px solid black;
+    opacity: 1;
+    transition: 1s;
+}
+.aboutme-image img:hover{
+    opacity: 0.5;
+}
+.aboutme-des{
+    text-align: center;
+}
+.aboutme-des p{
+    padding: 10px;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+
+.about-btn{
+    background-color: black;
+    color: white;
+    padding:10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+
+
+}
+
+.aboutme::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/* aboutme end */
+
+
+
+ /* my experience start here */
+
+.my-experience{
+    padding: 10px 0px;
+}
+
+.my-experience .card{
+    background-color: seagreen;
+    padding: 10px;
+    border-radius: 10px;
+    height: 600px;
+    transition: 0.5s;
+}
+.my-experience .card:hover{
+    box-shadow: 0px 4px 8px black;
+}
+.my-experience .card-header h1{
+    background-color: rgb(26, 24, 24);
+    color: white;
+    padding: 8px 0px;
+    border-radius: 5px;
+}
+
+.my-experience::after{
+    display: table;
+    clear: both;
+    content: '';
+}
+
+.programing-container{
+    padding: 10px;
+}
+
+.programing-container li{
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: white;
+    margin: 30px 0px;
+    position: relative;
+
+}
+
+.programing-container li::before{
+    content: '';
+    position: absolute;
+    top:30px;
+
+    width:100%;
+    height: 15px;
+    background-color:rgb(23, 41, 41);
+    border-radius: 1000px;
+
+}
+
+.programing-container li::after{
+    content: '';
+    position: absolute;
+    top:30px;
+
+    width:0%;
+    left: 0px;
+    height: 15px;
+    background-color:yellowgreen;
+    border-radius: 1000px;
+
+
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 2;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.programing-container .html::after{
+    animation-name: html;
+}
+
+@keyframes html{
+    to{
+        width: 90%;
+        background-color: rgb(17, 160, 12);
+    }
+}
+
+.programing-container .css::after{
+    animation-name: css;
+}
+
+@keyframes css{
+    to{
+        width: 85%;
+        background-color: goldenrod;
+    }
+}
+
+.programing-container .js::after{
+    animation-name: js;
+}
+
+@keyframes js{
+    to{
+        width: 80%;
+    }
+}
+
+.programing-container .bootstrap::after{
+    animation-name: bootstrap;
+}
+
+@keyframes bootstrap{
+    to{
+        width: 75%;
+    }
+}
+
+.programing-container .paythom::after{
+    animation-name: paythom;
+}
+
+@keyframes paythom{
+    to{
+        width: 70%;
+    }
+}
+
+.programing-container .jquary::after{
+    animation-name: jquary;
+}
+
+@keyframes jquary{
+    to{
+        width: 80%;
+    }
+}
+
+.programing-container .mysql::after{
+    animation-name: mysql;
+}
+
+@keyframes mysql{
+    to{
+        width: 85%;
+    }
+}
+
+.programing-container .javascript::after{
+    animation-name: javascript;
+}
+
+@keyframes javascript{
+    to{
+        width: 90%;
+    }
+}
+
+
+.my-experience::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+ /* my experience end here */
+
+
+
+/* our container link start */
+
+.our-container{
+    background-color: sienna;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+.our-achivement{
+    padding: 0px 15px;
+}
+
+.our-achivement p{
+    line-height: 30px;
+    text-align: left;
+    padding: 10px;
+}
+
+
+.our-loging{
+
+}
+
+
+input[type="text"]{
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: none;
+}
+
+input[type="email"]{
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.textarea{
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: none;
+    resize: none;
+}
+
+.btn{
+    padding: 10px;
+    width: 100px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 5px;
+    background-color:rgb(51, 38, 23);
+}
+.our-icon{
+
+}
+.social-media{
+
+}
+.social-media-btn{
+    padding: 20px;
+    width: 70px;
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+}
+
+.social-media-btn:hover{
+    background-color: gray;
+}
+
+
+
+.our-container::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* our container link end */
+
+
+/* footer start */
+
+.footer{
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-menu{
+    /* text-align: center; */
+
+}
+
+.footer-menu a{
+    display: block;
+    text-transform: uppercase;
+    margin: 20px 0px;
+    font-size: 17px;
+    /* background-color: #40868b; */
+}
+
+.footer-desc{
+    color: rgb(206, 192, 192);
+    
+    /* text-align: center; */
+}
+
